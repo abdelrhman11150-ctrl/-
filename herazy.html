@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#171713">
+<meta name="description" content="مطعم السيد الاحرازي الجديد في المنشية، أبو كبير، الشرقية. استمتع بأصالة الأكل المصري البلدي. مفتوح 24 ساعة.">
+<title>مطعم السيد الاحرازي الجديد | أصالة الطعم المصري</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #171713;
+  --surface: #22221c;
+  --gold: #c9a45c;
+  --gold-light: #e4c78b;
+  --cream: #f6f0e5;
+  --muted: #aaa69a;
+  --green: #596b43;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--cream);
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.8;
+}
+a { color: inherit; text-decoration: none; }
+.container { width: min(1160px, 90%); margin: auto; }
+header {
+  position: absolute; z-index: 10; top: 0; width: 100%;
+  border-bottom: 1px solid #ffffff20;
+}
+.nav {
+  height: 88px; display: flex; justify-content: space-between;
+  align-items: center; gap: 25px;
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-mark {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--gold);
+  flex-shrink: 0;
+}
+
+.logo-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.logo-name { font-weight: 800; font-size: 17px; line-height: 1.5; }
+.logo-name small { display: block; color: var(--gold); font-size: 10px; letter-spacing: 2px; }
+.nav-links { display: flex; gap: 30px; color: #eee9dc; font-size: 13px; }
+.nav-links a:hover { color: var(--gold); }
+.btn {
+  display: inline-flex; justify-content: center; align-items: center;
+  gap: 9px; padding: 13px 25px; border-radius: 3px;
+  font-family: inherit; font-weight: 800; font-size: 13px;
+  transition: .25s; cursor: pointer;
+}
+.btn-gold { background: var(--gold); color: #171713; }
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-3px); }
+.btn-outline { border: 1px solid #ffffff65; color: white; }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.hero {
+  min-height: 760px; position: relative; display: flex;
+  align-items: center; overflow: hidden;
+  background:
+    linear-gradient(90deg,rgba(17,17,14,.85),rgba(17,17,14,.3)),
+    linear-gradient(0deg,#171713 0%,transparent 35%),
+    url('image2/وجهه\ المطعم\ 2.jpg') center/cover;
+}
+.hero-content { padding-top: 95px; max-width: 670px; }
+.eyebrow {
+  color: var(--gold); font-size: 13px; letter-spacing: 2px;
+  font-weight: 700; margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: clamp(37px,6vw,69px); line-height: 1.45;
+  font-weight: 900; margin-bottom: 15px;
+}
+.hero h1 span { color: var(--gold-light); }
+.hero p { color: #ddd6c9; font-size: 17px; max-width: 530px; margin-bottom: 30px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-info {
+  display: flex; gap: 28px; flex-wrap: wrap; margin-top: 52px;
+  color: #eee5d4; font-size: 13px;
+}
+.hero-info span { display: flex; align-items: center; gap: 8px; }
+.hero-info strong { color: var(--gold-light); }
+.section { padding: 100px 0; }
+.section-label { color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: 2px; }
+.section-title { font-size: clamp(29px,4vw,43px); margin: 10px 0 15px; font-weight: 900; }
+.section-desc { color: var(--muted); max-width: 650px; }
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 65px;
+  align-items: center;
+}
+.about-image {
+  min-height: 440px; position: relative;
+  background: url('image2/عم\ السيد.jpg') center/cover;
+  border: 1px solid #c9a45c55;
+}
+.about-image::after {
+  content: ''; position: absolute; inset: 16px;
+  border: 1px solid #e4c78b77; pointer-events: none;
+}
+.about-copy p { color: var(--muted); margin: 20px 0; }
+.features { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 28px; }
+.feature { border-right: 2px solid var(--gold); padding: 5px 14px; }
+.feature strong { display: block; color: var(--gold-light); font-size: 15px; }
+.feature small { color: var(--muted); }
+.specialties { background: #201f19; text-align: center; }
+.center { display: flex; flex-direction: column; align-items: center; }
+.special-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 22px; margin-top: 45px; width: 100%; text-align: right;
+}
+.special-card {
+  background: var(--bg); border: 1px solid #ffffff12;
+  transition: .3s; overflow: hidden;
+}
+.special-card:hover { transform: translateY(-7px); border-color: var(--gold); }
+.special-card img { width: 100%; height: 225px; object-fit: cover; display: block; }
+.special-card div { padding: 22px; }
+.special-card h3 { color: var(--gold-light); font-size: 20px; margin-bottom: 7px; }
+.special-card p { color: var(--muted); font-size: 13px; }
+.quote {
+  padding: 90px 0; text-align: center;
+  background: linear-gradient(#171713d9,#171713e8),
+  url('image2/w\,vi\ hg;g.jpg')center/cover;
+}
+.quote blockquote {
+  font-family: 'Amiri',serif; font-size: clamp(25px,4vw,39px);
+  color: var(--gold-light); max-width: 750px; margin: 20px auto;
+}
+.quote p { color: var(--muted); font-size: 13px; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 35px; }
+.review {
+  background: var(--surface); padding: 26px;
+  border: 1px solid #ffffff10;
+}
+.stars { color: var(--gold); letter-spacing: 4px; font-size: 18px; }
+.review p { color: #e2dbce; margin: 12px 0; }
+.review small { color: var(--muted); }
+.rating { color: var(--gold-light); font-size: 42px; font-weight: 900; }
+.rating-wrap { text-align: center; margin-bottom: 30px; }
+.contact { background: #211f19; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; margin-top: 35px; }
+.contact-item {
+  display: flex; gap: 15px; align-items: flex-start;
+  padding: 19px 0; border-bottom: 1px solid #ffffff17;
+}
+.contact-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  display: grid; place-items: center;
+  color: var(--gold); border: 1px solid #c9a45c65; font-size: 19px;
+}
+.contact-item strong { display: block; color: var(--gold-light); }
+.contact-item span { color: var(--muted); font-size: 13px; }
+.map {
+  min-height: 350px; width: 100%; border: 0;
+  filter: grayscale(70%) contrast(95%);
+}
+footer { padding: 35px 0; text-align: center; color: var(--muted); font-size: 12px; }
+footer strong { color: var(--gold); }
+.mobile-cta {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 20; padding: 10px; background: #171713f5;
+  border-top: 1px solid #c9a45c55; gap: 10px;
+}
+.mobile-cta a { flex: 1; padding: 11px; text-align: center; font-weight: 800; font-size: 13px; }
+@media(max-width:850px) {
+  .nav-links { display: none; }
+  .nav { height: 75px; }
+  .nav>.btn { display: none; }
+  .hero { min-height: 700px; background-position: 60% center; }
+  .hero-content { padding-top: 80px; }
+  .about-grid,.contact-grid { grid-template-columns: 1fr; gap: 30px; }
+  .about-image { min-height: 320px; }
+  .special-grid { grid-template-columns: 1fr 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .section { padding: 70px 0; }
+  .mobile-cta { display: flex; }
+  body { padding-bottom: 65px; }
+}
+@media(max-width:520px) {
+  .special-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 39px; }
+  .hero p { font-size: 15px; }
+  .hero-info { gap: 12px; }
+  .features { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="container nav">
+  <a href="#" class="logo">
+   <div class="logo-mark">
+  <img src="image2/logo.png" alt="لوجو مطعم السيد الاحرازي">
+</div>
+   <div class="logo-name">مطعم السيد الاحرازي الجديد
+    <small>أصالة الطعم المصري</small>
+   </div>
+  </a>
+  <nav class="nav-links">
+   <a href="#home">الرئيسية</a>
+   <a href="#about">عن المطعم</a>
+   <a href="#specialties">أشهر الأكلات</a>
+   <a href="#reviews">آراء العملاء</a>
+   <a href="#contact">تواصل معنا</a>
+  </nav>
+  <a class="btn btn-gold" href="tel:01020002199">اتصل بنا الآن</a>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="container">
+  <div class="hero-content">
+   <div class="eyebrow">◆ نكهة مصرية أصيلة ◆</div>
+   <h1>الطعم الأصيل<br>له <span>عنوان</span>!</h1>
+   <p>في مطعم السيد الاحرازي الجديد، استمتع بتجربة الأكل البلدي المصري، بطعمه الأصيل وأجوائه التي تفكرك بأحلى الأكلات المصرية.</p>
+   <div class="hero-actions">
+    <a class="btn btn-gold" href="tel:01020002199">☎ اتصل بنا</a>
+    <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=PMG9%2BFM+Abu+Kabir+Egypt" target="_blank">⌖ موقع المطعم</a>
+   </div>
+   <div class="hero-info">
+    <span>★ <strong>4.1 / 5</strong> تقييم العملاء</span>
+    <span>◷ <strong>مفتوح 24 ساعة</strong></span>
+    <span>♙ <strong>200–400 جنيه</strong> للفرد</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="about">
+ <div class="container about-grid">
+  <div class="about-image"></div>
+  <div class="about-copy">
+   <div class="section-label">حكاية الطعم الأصيل</div>
+   <h2 class="section-title">مش مجرد أكلة...<br>دي حكاية طعم بلدي!</h2>
+   <p>في مطعم السيد الاحرازي الجديد، بنحتفي بروح الأكل المصري البلدي. تجربة تجمع بين النكهة الأصيلة، واللمة الحلوة، وحب الأكل اللي من القلب.</p>
+   <p>سواء جاي تتغدى، أو تاخد أكلك معاك، إحنا بنرحب بيك في أي وقت.</p>
+   <div class="features">
+    <div class="feature"><strong>طعم مصري أصيل</strong><small>أكلات بلدي محبوبة</small></div>
+    <div class="feature"><strong>مفتوح 24 ساعة</strong><small>استقبالك في أي وقت</small></div>
+    <div class="feature"><strong>جلوس داخل المطعم</strong><small>استمتع بوجبتك عندنا</small></div>
+    <div class="feature"><strong>طلبات سفري</strong><small>خد أكلك معاك</small></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section specialties" id="specialties">
+ <div class="container center">
+  <div class="section-label">من الأكلات اللي بنتميز بيها</div>
+  <h2 class="section-title">الطعم اللي الناس بتتكلم عنه</h2>
+  <p class="section-desc">من واقع آراء زبائننا، دي بعض الأكلات اللي اتشهرت في تقييمات المطعم.</p>
+  <div class="special-grid">
+   <article class="special-card">
+    <img src="image2/kebda.jpg" alt="كبدة مشوية">
+    <div><h3>الكبدة البلدي</h3><p>من الأكلات اللي نالت إعجاب زبائن المطعم وأشادوا بطعمها.</p></div>
+   </article>
+   <article class="special-card">
+    <img src="image2/مخ.jpg" alt="أكلات مصرية">
+    <div><h3>المخ</h3><p>من أشهر الأطباق التي ذكرها الزبائن في تقييماتهم.</p></div>
+   </article>
+   <article class="special-card">
+    <img src="image2/شطيطه.jpg" alt="أطباق طعام">
+    <div><h3>الشطيطة</h3><p>من الأكلات التي خصّها العملاء بإشادة مميزة.</p></div>
+   </article>
+  </div>
+  <p style="color:var(--muted);font-size:11px;margin-top:18px">صور توضيحية. يرجى التواصل مع المطعم للتأكد من توافر الأصناف.</p>
+ </div>
+</section>
+
+<section class="quote">
+ <div class="container">
+  <div class="section-label">كلام من القلب</div>
+  <blockquote>«أحلى شطيطة وكبدة ومخ في مصر»</blockquote>
+  <p>من آراء زبائن مطعم السيد الاحرازي الجديد</p>
+ </div>
+</section>
+
+<section class="section" id="reviews">
+ <div class="container">
+  <div class="center">
+   <div class="section-label">ثقة زبائننا هي الأهم</div>
+   <h2 class="section-title">زبائننا بيتكلموا عننا</h2>
+  </div>
+  <div class="rating-wrap">
+   <div class="rating">4.1 / 5</div>
+   <div class="stars">★★★★★</div>
+   <small style="color:var(--muted)">بناءً على 15 مراجعة على Google</small>
+  </div>
+  <div class="reviews-grid">
+   <article class="review">
+    <div class="stars">★★★★★</div>
+    <p>أحلى شطيطة وكبدة ومخ في مصر.</p>
+    <small>د. محمد عبدالعزيز · مرشد محلي</small>
+   </article>
+   <article class="review">
+    <div class="stars">★★★★★</div>
+    <p>أحسن كبدة بلدي ومخ.</p>
+    <small>د. محمد عبدالعزيز · مرشد محلي</small>
+   </article>
+   <article class="review">
+    <div class="stars">★★★★★</div>
+    <p>تقييم إيجابي للطعام والخدمة.</p>
+    <small>أحمد الهتيمي · مرشد محلي</small>
+   </article>
+  </div>
+  <div class="center" style="margin-top:30px">
+   <a class="btn btn-outline" target="_blank" href="https://www.google.com/maps/search/?api=1&query=مطعم+السيد+الاحرازي+الجديد+ابو+كبير">شاهد التقييمات على Google</a>
+  </div>
+ </div>
+</section>
+
+<section class="section contact" id="contact">
+ <div class="container">
+  <div class="section-label">مستنيين زيارتك</div>
+  <h2 class="section-title">تعالى زورنا!</h2>
+  <p class="section-desc">أهلاً بيك في مطعم السيد الاحرازي الجديد. تواصل معانا أو اعرف طريقك للمطعم.</p>
+  <div class="contact-grid">
+   <div>
+    <div class="contact-item">
+     <div class="contact-icon">⌖</div>
+     <div><strong>عنوان المطعم</strong><span>المنشية، أبو كبير، مركز أبو كبير، محافظة الشرقية 44671</span></div>
+    </div>
+    <div class="contact-item">
+     <div class="contact-icon">☎</div>
+     <div><strong>رقم الهاتف</strong><span dir="ltr">010 20002199</span></div>
+    </div>
+    <div class="contact-item">
+     <div class="contact-icon">◷</div>
+     <div><strong>مواعيد العمل</strong><span>مفتوح على مدار الساعة · 24 ساعة</span></div>
+    </div>
+    <div class="contact-item">
+     <div class="contact-icon">♙</div>
+     <div><strong>متوسط الأسعار</strong><span>200 – 400 جنيه للفرد حسب بيانات المطعم</span></div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:25px">
+     <a class="btn btn-gold" href="tel:01020002199">اتصل بالمطعم</a>
+     <a class="btn btn-outline" target="_blank" href="https://www.google.com/maps/search/?api=1&query=PMG9%2BFM+Abu+Kabir+Egypt">احصل على الاتجاهات</a>
+    </div>
+   </div>
+   <div>
+    <iframe class="map" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=PMG9%2BFM%20Abu%20Kabir%20Egypt&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container">
+  <div class="logo" style="justify-content:center;margin-bottom:15px">
+   <div class="logo-mark">س</div>
+   <div class="logo-name">مطعم السيد الاحرازي الجديد<small>أصالة الطعم المصري</small></div>
+  </div>
+  <p>الطعم الأصيل... واللمة الأحلى.</p>
+  <p style="margin-top:15px">© <span id="year"></span> مطعم السيد الاحرازي الجديد. جميع الحقوق محفوظة.</p>
+ </div>
+</footer>
+
+<div class="mobile-cta">
+ <a class="btn-gold" href="tel:01020002199">☎ اتصل الآن</a>
+ <a class="btn-outline" href="https://www.google.com/maps/search/?api=1&query=PMG9%2BFM+Abu+Kabir+Egypt" target="_blank">⌖ الاتجاهات</a>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
